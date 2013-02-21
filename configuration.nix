@@ -72,8 +72,6 @@
 	 maxSpeed = "0.8";
 	 twoFingerScroll = true;
        };
-       windowManager.awesome.enable = true;
-       windowManager.default = "awesome";
      };  
      httpd = {
        enable = true;
