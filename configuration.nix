@@ -31,6 +31,8 @@
       } ];
       supportedFilesystems = [ "zfs" ];
     };
+    kernelModules = [ "netatop" ];
+    extraModulePackages = [ pkgs.linuxPackages.netatop ];
   };
 
   networking = {
@@ -152,6 +154,7 @@
     enableBashCompletion = true;
     systemPackages = with pkgs; [
       aria2
+      atop
       calibre
       dropbox
       emacs
