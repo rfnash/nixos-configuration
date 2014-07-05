@@ -363,6 +363,7 @@
       modern
       terminus_font
       ttf_bitstream_vera
+      symbola
       ];
   };
 }
