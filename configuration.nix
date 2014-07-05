@@ -201,25 +201,19 @@
       emacs
       fdm
       file
-      gdb
       git
       gnupg
       htop
-      incrtcl
       inetutils
       ledger
       mu
       ncdu
       php
-      tcl
       texLiveFull
-      tk
       unzip
       vim_configurable
       weechat
-      xclip
       xsel
-      zsh
       ];
 
     x11Packages = with pkgs; [
