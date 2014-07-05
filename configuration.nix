@@ -105,9 +105,13 @@
   };
 
   services = {
-#   openssh.enable = true;
+    openssh.enable = true;
     printing.enable = true;
     unbound.enable = true;
+    ntp.enable = true;
+    gpm.enable = true;
+    haveged.enable = true;
+    oidentd.enable = true;
     xserver = {
       enable = true;
       layout = "dvorak";
