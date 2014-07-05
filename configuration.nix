@@ -19,7 +19,7 @@
     };
     initrd = {
       luks.devices = [ {
-        device = "/dev/sda3";
+        device = "/dev/sda4";
         name = "gentoo_root";
         preLVM = true;
       } ];
@@ -39,20 +39,54 @@
 
   fileSystems = [
   {
-    mountPoint = "/";
-    label = "nix-btrfs";
-    fsType = "ext4";
+    mountPoint = "/boot";
+    label = "boot";
+    fsType = "ext2";
   }
   {
     mountPoint = "/home";
-    label = "home";
-    fsType = "ext4";
+    label = "exherbo";
+    fsType = "btrfs";
+    options = "compress=lzo";
   }
   {
     mountPoint = "/tmp";
     device = "tmpfs";
     fsType = "tmpfs";
     options = "size=2G";
+  }
+  {
+    mountPoint = "/mnt/arch";
+    label = "arch-btrfs";
+    fsType = "btrfs";
+    options = "compress=lzo";
+  }
+  {
+    mountPoint = "/mnt/debian";
+    label = "sid";
+    fsType = "ext4";
+  }
+  {
+    mountPoint = "/var/lib/docker";
+    label = "docker";
+    fsType = "btrfs";
+    options = "compress=lzo";
+  }
+  {
+    mountPoint = "/mnt/alpine";
+    label="alpine";
+    fsType="ext4";
+  }
+  {
+    mountPoint = "/mnt/backup";
+    label="backup";
+    fsType="btrfs";
+    options = "compress=lzo";
+  }
+  {
+    mountPoint = "/mnt/shared-ext2";
+    label="shared-ext2";
+    fsType="ext2";
   }
   ];
 
