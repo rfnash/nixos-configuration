@@ -187,6 +187,7 @@
 
   security.sudo.wheelNeedsPassword = false;
   users.defaultUserShell = "/run/current-system/sw/bin/zsh";
+  security.setuidPrograms = [ "sendmail" ];
   time.timeZone = "America/Detroit";
   hardware.pulseaudio.enable = true;
 
