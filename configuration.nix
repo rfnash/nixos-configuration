@@ -171,6 +171,10 @@
       enable = true;
       listenAddress = "127.0.0.1:8123";
     };
+    redshift = {
+      enable = true;
+      latitude = "41.820202";
+      longitude = "-86.236801";
     };
   };
 
@@ -199,7 +203,6 @@
       mu
       ncdu
       php
-      redshift
       tcl
       texLiveFull
       tk
