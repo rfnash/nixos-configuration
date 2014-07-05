@@ -152,10 +152,17 @@
       username = "rfnash";
       password = "/etc/nixos/gogoc.passwd";
     };
+    # TODO: automatically generate SSL certs
     dovecot2 = {
       enable = true;
       enablePop3 = false;
       mailLocation = "maildir:~/Maildir:LAYOUT=fs:INBOX=~/Maildir/Inbox";
+      extraConfig = "mail_debug = yes";
+      sslServerCert = "/etc/ssl/dovecotcert.pem";
+      sslServerKey = "/etc/ssl/private/dovecot.pem";
+      sslCACert = "/etc/ssl/private/dovecot.pem";
+    };
+
     tor = {
       client = {
         enable = true;
