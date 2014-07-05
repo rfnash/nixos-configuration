@@ -119,6 +119,7 @@
       enableTCP = true;
       layout = "dvorak";
       xkbOptions = "lv3:ralt_switch,ctrl:swapcaps,compose:ralt,terminate:ctrl_alt_bksp";
+      windowManager.i3.enable = true;
       desktopManager.xterm.enable = false;
       synaptics = {
         enable = true;
