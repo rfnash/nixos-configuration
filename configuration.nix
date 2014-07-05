@@ -34,7 +34,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "athena.robertnash.net";
     wireless.enable = true;
     firewall = {
       enable = true;
