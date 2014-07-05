@@ -190,6 +190,7 @@
   security.setuidPrograms = [ "sendmail" ];
   time.timeZone = "America/Detroit";
   hardware.pulseaudio.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   programs.bash.enableCompletion = true;
   programs.zsh.enable = true;
