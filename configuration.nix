@@ -192,6 +192,27 @@
   hardware.pulseaudio.enable = true;
   virtualisation.libvirtd.enable = true;
 
+  users.extraGroups.rfnash.gid = 1000;
+  users.extraUsers.rfnash = {
+    createHome = true;
+    home = "/home/rfnash";
+    description = "Robert F. Nash";
+    extraGroups = [
+      "wheel"
+      "audio"
+      "lp"
+      "cdrom"
+      "video"
+      "systemd-journal"
+      "users"
+      "grsecurity"
+      "libvirtd"
+      "tty"
+      ];
+    shell = "/run/current-system/sw/bin/zsh";
+    uid = 1000;
+    group = "rfnash";
+  };
   programs.bash.enableCompletion = true;
   programs.zsh.enable = true;
   environment = {
