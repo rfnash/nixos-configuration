@@ -116,6 +116,7 @@
     oidentd.enable = true;
     xserver = {
       enable = true;
+      enableTCP = true;
       layout = "dvorak";
       xkbOptions = "lv3:ralt_switch,ctrl:swapcaps,compose:ralt,terminate:ctrl_alt_bksp";
       desktopManager.xterm.enable = false;
