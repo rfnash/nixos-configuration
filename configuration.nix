@@ -199,6 +199,15 @@
     path = [ pkgs.iptables ];
     serviceConfig.ExecStart = "/etc/nixos/docker -d";
   };
+
+  # TODO: automatically fix shebang and permissions on temp_throttle.sh
+  systemd.services.temp-throttle = {
+    wantedBy = [ "multi-user.target" ];
+    description = "throttles CPU when temp exceeds limit";
+    path = [ pkgs.bash pkgs.cpufrequtils ];
+    serviceConfig.ExecStart = "/etc/nixos/temp-throttle/temp_throttle.sh 80";
+  };
+
   users.extraGroups.rfnash.gid = 1000;
   users.extraUsers.rfnash = {
     createHome = true;

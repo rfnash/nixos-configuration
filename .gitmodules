@@ -1,0 +1,3 @@
+[submodule "temp-throttle"]
+	path = temp-throttle
+	url = git://github.com/Sepero/temp-throttle.git
