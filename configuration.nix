@@ -192,6 +192,13 @@
   hardware.pulseaudio.enable = true;
   virtualisation.libvirtd.enable = true;
 
+  # TODO: automatically download docker binary
+  systemd.services.docker = {
+    wantedBy = [ "multi-user.target" ];
+    description = "Docker Daemon";
+    path = [ pkgs.iptables ];
+    serviceConfig.ExecStart = "/etc/nixos/docker -d";
+  };
   users.extraGroups.rfnash.gid = 1000;
   users.extraUsers.rfnash = {
     createHome = true;
