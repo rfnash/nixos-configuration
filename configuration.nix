@@ -337,8 +337,8 @@
   };
 
   nixpkgs.config = {
-    firefox = {
     allowUnfree = true;
+    firefox = {
       enableAdobeFlash = true;
     };
     rxvt_unicode = {
@@ -360,7 +360,7 @@
       gentium
       liberation_ttf
       libertine
-      modern
+      lmodern
       terminus_font
       ttf_bitstream_vera
       symbola
