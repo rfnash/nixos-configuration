@@ -233,34 +233,114 @@
   programs.zsh.enable = true;
   environment = {
     systemPackages = with pkgs; [
+      anki
       aria2
+      aspell
+      aspellDicts.en
       atop
+      bash
+      bind                        # provides dig
+      binutils
+      bitlbee
+      bridge_utils                # Needed by qemu for some networking
+      bogofilter
       calibre
+      chromiumWrapper
+      cpufrequtils
+      cvs
+      dar
+      diffuse
+      dmenu
+      dnsmasq
       dropbox
+      dunst
+      e17.terminology
       emacs
+      gimp
       fdm
       file
+      finger_bsd
+      firefoxWrapper
       git
+      gnumake
       gnupg
+      go
+      gtk-engine-murrine
+      gtk_engines
+      gtypist
+      haskellPackages.yeganesh
+      hicolor_icon_theme
       htop
       inetutils
+      jq
+      kde4.ktouch
+      keynav
       ledger
+      libnotify
+      links2
+      lsof
+      mailutils                   # Provides 'mail'
+      mercurial
+      most
+      mplayer
+      msmtp
       mu
+      mutt
       ncdu
+      nmap
+      nodejs
+      openjre
+      opensmtpd
+      openssl
+      pamixer
+      parcellite
+      pavucontrol
+      pidgin
+      pinentry                    # Must be installed locally as well
       php
-      texLiveFull
-      unzip
-      vim_configurable
-      weechat
-      xsel
-      ];
-
-    x11Packages = with pkgs; [
+      python
+      pythonPackages.notify
+      pythonPackages.pip
+      pythonPackages.pygtk
+      pythonPackages.pyinotify
+      rlwrap
       rxvt_unicode
+      silver-searcher
+      sloccount
+      stow
+      subversion
+      swiProlog
+      taskwarrior
+      tig
+      tmux
+      unclutter
+      units
+      unrar
+      vagrant
+      vimbWrapper
+      vim_configurable
+      vimprobable2
+      w3m
+      weechat
+      wget
+      which
+      wxPython
+      xbindkeys
+      xconq
+      xdotool
+      xfontsel
+      xorg.xhost
+      xsel
+      zathura
+      znc
       ];
   };
 
   nixpkgs.config = {
+    firefox = {
+    allowUnfree = true;
+      enableAdobeFlash = true;
+    };
     rxvt_unicode = {
       perlSupport = true;
     };
