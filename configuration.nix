@@ -16,6 +16,12 @@
       enable = true;
       version = 2;
       device = "/dev/sda";
+      extraEntries =
+        ''
+        menuentry "Other Distos" {
+          configfile /grub/grub.archlinux.cfg
+        }
+      '';
     };
     initrd = {
       luks.devices = [ {
