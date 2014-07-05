@@ -38,8 +38,8 @@
     wireless.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [80 443 113 9001 9030 ];
-      allowedUDPPorts = [80 443 113 9001 9030 ];
+      allowedTCPPorts = [ 80 443 113 9001 9030 ];
+      allowedUDPPorts = [ 80 443 113 9001 9030 ];
     };
   };
 
