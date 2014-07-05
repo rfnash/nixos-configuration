@@ -183,6 +183,7 @@
   hardware.pulseaudio.enable = true;
 
   programs.bash.enableCompletion = true;
+  programs.zsh.enable = true;
   environment = {
     systemPackages = with pkgs; [
       aria2
