@@ -119,10 +119,8 @@
       layout = "dvorak";
       xkbOptions = "lv3:ralt_switch,ctrl:swapcaps,compose:ralt,terminate:ctrl_alt_bksp";
       desktopManager.xterm.enable = false;
-      modules = [ "xf86-input-synaptics" ];
       synaptics = {
         enable = true;
-        maxSpeed = "0.8";
         twoFingerScroll = true;
       };
     };
