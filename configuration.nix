@@ -182,8 +182,8 @@
   time.timeZone = "America/Detroit";
   hardware.pulseaudio.enable = true;
 
+  programs.bash.enableCompletion = true;
   environment = {
-    enableBashCompletion = true;
     systemPackages = with pkgs; [
       aria2
       atop
