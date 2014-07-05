@@ -353,16 +353,16 @@
   fonts = {
     enableFontDir = true;
     enableGhostscriptFonts = true;
-    extraFonts = [
-      pkgs.anonymousPro
-      pkgs.corefonts
-      pkgs.dejavu_fonts
-      pkgs.gentium
-      pkgs.liberation_ttf
-      pkgs.libertine
-      pkgs.lmodern
-      pkgs.terminus_font
-      pkgs.ttf_bitstream_vera
+    fonts = with pkgs; [
+      anonymousPro
+      corefonts
+      dejavu_fonts
+      gentium
+      liberation_ttf
+      libertine
+      modern
+      terminus_font
+      ttf_bitstream_vera
       ];
   };
 }
