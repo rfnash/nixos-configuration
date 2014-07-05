@@ -29,7 +29,7 @@
         name = "gentoo_root";
         preLVM = true;
       } ];
-      supportedFilesystems = [ "zfs"];
+      supportedFilesystems = [ "zfs" ];
     };
   };
 
