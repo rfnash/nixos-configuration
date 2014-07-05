@@ -132,6 +132,20 @@
       adminAddr = "rfnash@localhost";
       extraModules =  [ { name = "php5"; path = "/nix/store/j0ihspf2zhkdspsd9n7ma8zn19macpkm-php-5.3.18/modules/libphp5.so"; } ];
     };
+    opensmtpd = {
+      enable = true;
+      serverConfiguration =
+        ''
+        listen on localhost
+        table aliases { root = rfnash }
+      accept for local alias <aliases> deliver to maildir "%{user.directory}/Maildir/Inbox"
+        accept for any relay
+        '';
+    };
+    smartd = {
+      enable = true;
+      devices = [ { device = "/dev/sda"; } ];
+    };
     gogoclient = {
       enable = true;
       server = "montreal.freenet6.net";
@@ -142,6 +156,21 @@
       enable = true;
       enablePop3 = false;
       mailLocation = "maildir:~/Maildir:LAYOUT=fs:INBOX=~/Maildir/Inbox";
+    tor = {
+      client = {
+        enable = true;
+        privoxy.enable = true;
+        privoxy.listenAddress = "127.0.0.1:8118";
+        socksListenAddress = "127.0.0.1:9150";
+      };
+      relay = {
+        enable = true;
+      };
+    };
+    privoxy = {
+      enable = true;
+      listenAddress = "127.0.0.1:8123";
+    };
     };
   };
 
