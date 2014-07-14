@@ -139,7 +139,7 @@
       enable = true;
       enableUserDir = true;
       adminAddr = "rfnash@localhost";
-      extraModules =  [ { name = "php5"; path = "/nix/store/j0ihspf2zhkdspsd9n7ma8zn19macpkm-php-5.3.18/modules/libphp5.so"; } ];
+      extraModules =  [ { name = "php5"; path = "${pkgs.php}/modules/libphp5.so"; } ];
     };
     opensmtpd = {
       enable = true;
