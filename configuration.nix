@@ -286,6 +286,7 @@
       ledger
       libnotify
       links2
+      linuxPackages.virtualbox
       lsof
       mailutils                   # Provides 'mail'
       mercurial
