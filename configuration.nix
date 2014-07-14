@@ -263,6 +263,7 @@
       dropbox
       e17.terminology
       emacs
+      fossil
       gimp
       fdm
       file
