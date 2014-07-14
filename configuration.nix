@@ -261,7 +261,6 @@
       dmenu
       dnsmasq
       dropbox
-      dunst
       e17.terminology
       emacs
       gimp
