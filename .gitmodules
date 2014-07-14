@@ -1,3 +1,6 @@
 [submodule "temp-throttle"]
 	path = temp-throttle
 	url = git://github.com/Sepero/temp-throttle.git
+[submodule "nixpkgs"]
+	path = nixpkgs
+	url = git@github.com:rfnash/nixpkgs.git
