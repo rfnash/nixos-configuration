@@ -250,7 +250,6 @@
       bash
       bind                        # provides dig
       binutils
-      bitlbee
       bridge_utils                # Needed by qemu for some networking
       bogofilter
       calibre
