@@ -31,8 +31,17 @@
       } ];
       supportedFilesystems = [ "zfs" ];
     };
-    kernelModules = [ "netatop" ];
-    extraModulePackages = [ pkgs.linuxPackages.netatop ];
+    kernelModules = [
+        "netatop"
+        "vboxdrv"
+        "vboxnetadp"
+        "vboxnetflt"
+        "vboxpci"
+        ];
+    extraModulePackages = [
+        pkgs.linuxPackages.netatop
+        pkgs.linuxPackages.virtualbox
+        ];
   };
 
   networking = {
