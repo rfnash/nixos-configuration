@@ -30,7 +30,8 @@
         preLVM = true; } ];
 
     # Set up the swap device
-    swapDevices = [ { device = "/dev/vg_rfnashlaptop/lv_swap"; } ];
+#   swapDevices = [ { device = "/dev/vg_rfnashlaptop/lv_swap"; } ];
+    boot.kernelParams = ["resume=/dev/vg_rfnashlaptop/lv_swap"];
 
 #   boot.initrd.supportedFilesystems = [ "zfs" ];
     boot.kernelModules = [ "netatop"
