@@ -175,11 +175,12 @@
     fonts = {
         enableFontDir = true;
         enableGhostscriptFonts = true;
-#        fonts = with pkgs; [
-#            dejavu_fonts
-#            liberation_ttf
-#            terminus_font
-#            ttf_bitstream_vera
-#            symbola ];
+        fonts = with pkgs; [
+            dejavu_fonts
+            liberation_ttf
+            terminus_font
+            ttf_bitstream_vera
+#           symbola
+            ];
     };
 }
