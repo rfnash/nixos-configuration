@@ -29,6 +29,9 @@
         name = "gentoo_root";
         preLVM = true; } ];
 
+    # Set up the swap device
+    swapDevices = [ { device = "/dev/vg_rfnashlaptop/lv_swap"; } ];
+
 #   boot.initrd.supportedFilesystems = [ "zfs" ];
     boot.kernelModules = [ "netatop"
         "vboxdrv"
@@ -57,9 +60,6 @@
         fsType = "btrfs";
         options = "compress=lzo"; }
     ];
-
-    # Set up the swap device
-    swapDevices = [ { device = "/dev/vg_rfnashlaptop/lv_swap"; } ];
 
     # Select internationalisation properties.
     i18n = {
