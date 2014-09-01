@@ -29,7 +29,7 @@
         name = "gentoo_root";
         preLVM = true; } ];
 
-    boot.initrd.supportedFilesystems = [ "zfs" ];
+#   boot.initrd.supportedFilesystems = [ "zfs" ];
     boot.kernelModules = [ "netatop"
         "vboxdrv"
         "vboxnetadp"
