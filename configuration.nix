@@ -51,6 +51,9 @@
     { mountPoint = "/boot";
         label = "boot";
         fsType = "ext2"; }
+    { mountPoint = "/home";
+        label = "home";
+        fsType = "ext4"; }
     { mountPoint = "/tmp";
         device = "tmpfs";
         fsType = "tmpfs";
